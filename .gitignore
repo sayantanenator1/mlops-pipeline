@@ -131,7 +131,7 @@ venv/
 ENV/
 env.bak/
 venv.bak/
-# gcp.json
+gcp.json
 
 # Spyder project settings
 .spyderproject
