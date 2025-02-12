@@ -45,7 +45,7 @@ To run this component following command will be used
 
 ```shell
 cd featureengineering
-mlflow run . -P validated_train_path=s3://gunmlartifacts/datalake/landing_zone/train.csv -P feature_store_path=s3://gunmlartifacts/feature_store
+mlflow run . -P validated_train_path=gs://examplemlops/landing-zone/train.csv -P feature_store_path=gs://examplemlops/feature-store/
 ```
 *You might want to change the paths, to paths on your s3 drive.*
 
@@ -55,7 +55,7 @@ Lastly we will include an `MLproject` file for the model training component. We 
 
 ```shell
 cd modeltraining
-mlflow run . -P x_path=s3://gunmlartifacts/feature_store/X.npy -P y_path=s3://gunmlartifacts/feature_store/y.npy -P n_estimators=120 -P max_depth=15 -P n_jobs=-1
+mlflow run . -P x_path=gs://examplemlops/feature-store/X.npy -P y_path=gs://examplemlops/feature-store/y.npy -P n_estimators=120 -P max_depth=15 -P n_jobs=-1 
 ```
 *You might want to change the paths, to paths on your s3 drive.*
 

@@ -9,4 +9,5 @@ entry_points:
         type: uri
     command: python run.py --validated_train_path {validated_train_path}
                           --feature_store_path {feature_store_path}
+                          #--project_id {project_id}
                         

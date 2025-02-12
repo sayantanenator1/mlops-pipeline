@@ -1,4 +1,4 @@
-name: mlflowpipeline
+name: datavalidation
 channels:
   - conda-forge
   - defaults
@@ -8,9 +8,12 @@ dependencies:
   - scikit-learn=1.3.0
   - pandas=2.0.3
   - seaborn=0.12.2
+  - jupyterlab=3.6.1
   - psycopg2=2.9.3
   - pip=23.1.2
-  - pip:
-    - boto3==1.28.20
-    - pandera[io]==0.16.1
+  - pip:    
+    - pandera==0.22.1
     - hydra-core==1.3.2
+    - boto3
+    - gcsfs
+    - databricks-cli
