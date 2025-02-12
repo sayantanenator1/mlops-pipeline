@@ -11,7 +11,8 @@ def main(cfg:DictConfig):
                    parameters={
                        'train_path':cfg.data.train_path,
                        'test_path':cfg.data.test_path,
-                       'landing_zone_path':cfg.data.landing_zone_path
+                       'landing_zone_path':cfg.data.landing_zone_path,
+                       'project_id' : cfg.data.project_id
                    })
     _ = mlflow.run(uri=os.path.join(base_path,"featureengineering"),
                    entry_point="main",

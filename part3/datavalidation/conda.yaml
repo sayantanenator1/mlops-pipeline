@@ -11,10 +11,8 @@ dependencies:
   - jupyterlab=3.6.1
   - psycopg2=2.9.3
   - pip=23.1.2
-  - pip:
-    - pandera[io]==0.16.1
+  - pip:    
+    - pandera=0.22.1
     - hydra-core==1.3.2
-    - s3fs==2023.6.0
     - boto3
     - gcsfs
-    - azure-storage-blob

@@ -24,6 +24,7 @@ data:
   feature_store_path: gs://examplemlops/feature-store
   x_path: gs://examplemlops/feature-store/X.npy #${hydra:runtime.cwd}/../s3_data/X.npy
   y_path: gs://examplemlops/feature-store/y.npy #${hydra:runtime.cwd}/../s3_data/y.npy
+  project_id: alien-vim-449103-n5
   
 hyperparams:
   n_estimators: 200

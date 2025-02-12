@@ -77,9 +77,12 @@ parser.add_argument("--max_depth",
 parser.add_argument("--n_jobs",
                     type=int,
                     help="Number of CPU cores to be used for processing")
+parser.add_argument("--project_id",
+                    type=str,
+                    help="Project ID for GCS")
 
 def get_gcs(gcs_path):
-    fs = gcsfs.GCSFileSystem(project='alien-vim-449103-n5')
+    fs = gcsfs.GCSFileSystem(project='args.project_id')
     return np.load(fs.open(gcs_path), allow_pickle=True)
 
 def main(args):

@@ -1,4 +1,4 @@
-name: datavalidation
+name: datavalidation-new
 conda_env: conda.yaml
 entry_points:
   main:

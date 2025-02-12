@@ -51,9 +51,13 @@ parser.add_argument("--feature_store_path",
                     type=str,
                     help="Path to feature store base directory")
 
+parser.add_argument("--project_id",
+                    type=str,
+                    help="Project ID for GCS")
+
 def load_gcs(gcs_path, arr):
     logging.debug(f"Saving to GCS path: {gcs_path}")
-    fs = gcsfs.GCSFileSystem(project='alien-vim-449103-n5')
+    fs = gcsfs.GCSFileSystem(project='args.project_id')
     with fs.open(gcs_path, 'wb') as f:
         f.write(pickle.dumps(arr))
     logging.debug(f"Successfully saved to {gcs_path}")
